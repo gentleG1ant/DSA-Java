@@ -1,3 +1,30 @@
+package LinkedList;
+
+/*
+ * Program: Reverse a Singly Linked List
+ *
+ * Description:
+ * This program demonstrates two approaches for reversing a singly
+ * linked list.
+ *
+ * 1. Brute-Force Approach:
+ *    Uses a Stack to store the data values of all nodes and then
+ *    replaces the node values in reverse order.
+ *
+ *    Time Complexity: O(n)
+ *    Space Complexity: O(n)
+ *
+ * 2. Optimal Approach:
+ *    Reverses the links between nodes using three references:
+ *    prev, current, and front.
+ *
+ *    Time Complexity: O(n)
+ *    Space Complexity: O(1)
+ *
+ * The brute-force implementation is retained as a commented
+ * reference, while the optimal approach is currently active.
+ */
+
 // Brute Approach
 /*
 import java.util.*;
@@ -16,7 +43,7 @@ class singlyLL
 
 class reverseLL
 {
-    // Brute approach using Stack
+    // Brute approach using Stack.
     // Time Complexity: O(n)
     // Space Complexity: O(n)
     singlyLL reverse(singlyLL head)
@@ -24,17 +51,18 @@ class reverseLL
         singlyLL temp = head;
         Stack<Integer> stk = new Stack<>();
 
-        // Store all node values in the Stack
+        // Store all node values in the Stack.
         while(temp != null)
         {
             stk.push(temp.data);
             temp = temp.next;
         }
 
-        temp = head; // Reset temp to the head
+        // Reset temp to the head.
+        temp = head;
 
-        // Replace the node data with values
-        // popped from the Stack in reverse order
+        // Replace node data with values popped
+        // from the Stack in reverse order.
         while(temp != null)
         {
             temp.data = stk.pop();
@@ -44,6 +72,7 @@ class reverseLL
         return head;
     }
 
+    // Creates a singly linked list from the given array.
     singlyLL insert(int arr[])
     {
         singlyLL head = new singlyLL(arr[0]);
@@ -58,6 +87,7 @@ class reverseLL
         return head;
     }
 
+    // Prints all elements of the linked list.
     void print(singlyLL head)
     {
         singlyLL temp = head;
@@ -109,7 +139,7 @@ class singlyLL
 
 class reverseLL
 {
-    // Optimal approach using pointer reversal
+    // Reverses the linked list using pointer manipulation.
     // Time Complexity: O(n)
     // Space Complexity: O(1)
     singlyLL reverse(singlyLL head)
@@ -122,23 +152,24 @@ class reverseLL
 
         while(current != null)
         {
-            // Save the next node before changing current.next
+            // Save the next node before changing current.next.
             front = current.next;
 
-            // Reverse the link of the current node
+            // Reverse the link of the current node.
             current.next = prev;
 
-            // Move prev to the current node
+            // Move prev to the current node.
             prev = current;
 
-            // Move current to the next node
+            // Move current to the next node.
             current = front;
         }
 
-        // prev now points to the new head
+        // prev points to the new head of the reversed list.
         return prev;
     }
 
+    // Creates a singly linked list from the given array.
     singlyLL insert(int arr[])
     {
         singlyLL head = new singlyLL(arr[0]);
@@ -153,6 +184,7 @@ class reverseLL
         return head;
     }
 
+    // Prints all elements of the linked list.
     void print(singlyLL head)
     {
         singlyLL temp = head;
