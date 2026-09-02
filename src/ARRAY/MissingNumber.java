@@ -93,10 +93,10 @@ class SolutionBetter
 {
     int findNum(int arr[])
     {
-        /*
-         * Since one number is missing,
-         * n = arr.length + 1.
-         */
+
+         // Since one number is missing,
+         //n = arr.length + 1.
+
 int n = arr.length + 1;
 
 int actualSum = 0;
@@ -107,12 +107,11 @@ int actualSum = 0;
 actualSum += arr[i];
         }
 
-/*
+
  * Calculate the expected sum of numbers from 1 to n.
  *
  * Formula:
  * n * (n + 1) / 2
- */
 int expectedSum = n * (n + 1) / 2;
 
 // Difference gives the missing number.
