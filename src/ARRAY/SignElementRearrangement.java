@@ -1,4 +1,4 @@
-import java.util.*;
+/*import java.util.*;
 
 // Optimal Approach
 class SolutionRearrangement
@@ -49,7 +49,8 @@ public class SignElementRearrangement
         for(int tem : temp)
             System.out.print(tem + " ");
     }
-}import java.util.*;
+}*/
+import java.util.*;
 
 // Optimal Approach
 class SolutionRearrangement
