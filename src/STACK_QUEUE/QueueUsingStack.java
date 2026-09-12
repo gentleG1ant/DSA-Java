@@ -1,4 +1,3 @@
-import java.util.*;
 import java.util.Stack;
 
 /*
@@ -68,11 +67,11 @@ import java.util.Stack;
     only when out is empty.
 */
 
-class StackQueue
+class QueueStack
 {
     Stack<Integer> inp, out;
 
-    StackQueue()
+    QueueStack()
     {
         inp = new Stack<>();
         out = new Stack<>();
@@ -127,7 +126,7 @@ public class QueueUsingStack
 {
     public static void main(String[] args)
     {
-        StackQueue sq = new StackQueue();
+        QueueStack sq = new QueueStack();
 
         String[] commands = {
                 "push",
