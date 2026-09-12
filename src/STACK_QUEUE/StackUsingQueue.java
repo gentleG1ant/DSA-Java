@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.Queue;
 
-class QueueStack
+class StackQueue
 {
     Queue<Integer> q = new LinkedList<>();
 
@@ -59,7 +59,7 @@ public class StackUsingQueue
     public static void main(String[] args)
     {
         // Object creation of stack.
-        QueueStack qs = new QueueStack();
+        StackQueue qs = new StackQueue();
 
         // Commands used for testing the stack.
         String[] commands = {
