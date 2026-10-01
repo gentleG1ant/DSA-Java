@@ -1,0 +1,15 @@
+{
+    "name": "Java Development Environment",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "Oracle.oracle-java",
+                "vscjava.vscode-java-pack"
+            ],
+            "settings": {
+                "java.project.outputPath": "/tmp/java-classes"
+            }
+        }
+    }
+}
